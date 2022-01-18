@@ -75,7 +75,7 @@ func codepage(w http.ResponseWriter, r *http.Request) {
 	}
 }
 func add(em string,ps string){
-	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI("mongodb://localhost:27017"))
+	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI("mongodb+srv://mongo:gallardo@cluster0.l6jxp.mongodb.net/test"))
 		if err != nil {
                 panic(err)
         }
@@ -88,7 +88,7 @@ func add(em string,ps string){
 		fmt.Println("Inserted")
 }
 func  find(em string,ps string) bool{
-	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI("mongodb://localhost:27017"))
+	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI("mongodb+srv://mongo:gallardo@cluster0.l6jxp.mongodb.net/test"))
 		if err != nil {
                 panic(err)
         }
