@@ -2,7 +2,7 @@ version: '2'
 services:
   web:
     container_name: app-container
-    image: app
+    build: .
     ports:
      - "5000:5000"
   mongo:
