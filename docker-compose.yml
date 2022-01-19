@@ -1,8 +1,10 @@
 version: '2'
 services:
   web:
-    build: .
+    container_name: app-container
+    image: app
     ports:
      - "5000:5000"
-    environment:
-      - MONGODB_URI=mongodb+srv://mongo:gallardo@cluster0.l6jxp.mongodb.net/test
+  mongo:
+    container_name: mongo-container
+    image: mongo
