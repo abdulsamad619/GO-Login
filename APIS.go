@@ -27,8 +27,7 @@ func handleregister(w http.ResponseWriter, r *http.Request) {
 		logs = true
 		em := r.FormValue("email")
 		ps := r.FormValue("password")
-		ls := r.FormValue("number")
-		if em != "" && ps != "" && ls != "" {
+		if em != "" && ps != ""{
 			add(em, ps)
 			from := "mywork.p98@gmail.com"
 			password := "gallardo.98"
